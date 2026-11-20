@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>☀ WeatherNow</h2>
+    <span>Weather Information</span>
+</header>
+
+<main class="container">
+
+    <section class="search-section">
+        <h1>Informasi Cuaca</h1>
+        <p>Temukan informasi cuaca di kota kamu</p>
+
+        <div class="search-box">
+            <input id="kota" type="text" placeholder="Masukkan nama kota...">
+            <button id="btnCari">Cari</button>
+            <button id="btnLokasi" title="Gunakan lokasi saya">📍</button>
+        </div>
+
+        <div class="tools">
+            <button id="btnSatuan">Ubah ke °F</button>
+            <button id="btnFavorit">☆ Tambahkan Favorit</button>
+        </div>
+
+        <p id="pesan"></p>
+        <div id="daftarTerakhir" class="chips"></div>
+    </section>
+
+    <section id="kontenCuaca" class="hidden">
+
+        <div class="current-card">
+            <div>
+                <p id="tanggal"></p>
+                <h2 id="namaKota">Nama Kota</h2>
+                <p id="deskripsi">Kondisi cuaca</p>
+                <h1 id="suhu">--°C</h1>
+                <p id="terasa">Terasa seperti --°</p>
+            </div>
+            <div id="ikonUtama" class="big-icon">🌤️</div>
+        </div>
+
+        <h2 class="section-title">Detail Cuaca</h2>
+
+        <div class="detail-grid">
+            <div class="detail-card">
+                <span>💧 Kelembapan</span>
+                <h3 id="kelembapan">--%</h3>
+            </div>
+
+            <div class="detail-card">
+                <span>💨 Kecepatan Angin</span>
+                <h3 id="angin">-- km/h</h3>
+            </div>
+
+            <div class="detail-card">
+                <span>🌧️ Curah Hujan</span>
+                <h3 id="hujan">-- mm</h3>
+            </div>
+
+            <div class="detail-card">
+                <span>☁️ Tutupan Awan</span>
+                <h3 id="awan">--%</h3>
+            </div>
+
+            <div class="detail-card">
+                <span>🌞 Indeks UV</span>
+                <h3 id="uv">--</h3>
+            </div>
+
+            <div class="detail-card">
+                <span>🌂 Peluang Hujan</span>
+                <h3 id="peluangHujan">--%</h3>
+            </div>
+        </div>
+
+        <h2 class="section-title">Prakiraan Per Jam</h2>
+        <div id="prakiraanJam" class="hourly-list"></div>
+
+        <h2 class="section-title">Prakiraan 7 Hari</h2>
+        <div id="prakiraanHari" class="forecast-list"></div>
+
+        <div class="sun-card">
+            <div>
+                <span>🌅 Matahari terbit</span>
+                <h3 id="terbit">--:--</h3>
+            </div>
+            <div>
+                <span>🌇 Matahari terbenam</span>
+                <h3 id="terbenam">--:--</h3>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="favorite-section">
+        <h2>⭐ Kota Favorit</h2>
+        <div id="daftarFavorit" class="chips"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>WeatherNow © 2026 | Data cuaca dari Open-Meteo</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
